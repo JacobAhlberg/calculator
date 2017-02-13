@@ -7,14 +7,30 @@
     android:layout_height="match_parent"
     tools:context="com.example.jacob.acalculator.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:layout_width="0dp"
+        app:srcCompat="@color/colorPrimaryDark"
+        android:id="@+id/backgroundColor"
         tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="16dp"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="16dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_height="175dp" />
+
+    <TextView
+        android:text="576"
+        android:layout_width="376dp"
+        android:layout_height="52dp"
+        tools:layout_editor_absoluteY="87dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:id="@+id/resultView"
+        android:textSize="45dp"
+        android:textColor="@color/colorPrimary"
+        android:gravity="right"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
 </android.support.constraint.ConstraintLayout>
