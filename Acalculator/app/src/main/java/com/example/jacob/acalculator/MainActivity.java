@@ -4,11 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0,
-            addBtn, subtractBtn, equalBtn, divdeBtn, timeBtn;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0;
+    ImageButton addBtn, subtractBtn, equalBtn, divdeBtn, timeBtn;
     TextView resultView;
 
     @Override
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Initialising buttons and textview
+        //Initialising buttons and textView
         resultView = (TextView)findViewById(R.id.resultView);
         btn0 = (Button)findViewById(R.id.btn0);
         btn1 = (Button)findViewById(R.id.btn1);
@@ -28,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
         btn7 = (Button)findViewById(R.id.btn7);
         btn8 = (Button)findViewById(R.id.btn8);
         btn9 = (Button)findViewById(R.id.btn9);
+        addBtn = (ImageButton)findViewById(R.id.addBtn);
+        subtractBtn = (ImageButton)findViewById(R.id.subtractBtn);
+        divdeBtn = (ImageButton)findViewById(R.id.divideBtn);
+        timeBtn = (ImageButton)findViewById(R.id.timesBtn);
+        equalBtn = (ImageButton)findViewById(R.id.equalBtn);
 
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
