@@ -8,10 +8,10 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, clearBtn;
     ImageButton addBtn, subtractBtn, equalBtn, divideBtn, timeBtn;
     TextView resultView;
-    String sum = "";
+    String txtAnswer;
     double currentAnswer = 0;
     int temp1 = 0, temp2 = 0;
 
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btn7 = (Button)findViewById(R.id.btn7);
         btn8 = (Button)findViewById(R.id.btn8);
         btn9 = (Button)findViewById(R.id.btn9);
+        clearBtn = (Button)findViewById(R.id.clearBtn);
         addBtn = (ImageButton)findViewById(R.id.addBtn);
         subtractBtn = (ImageButton)findViewById(R.id.subtractBtn);
         divideBtn = (ImageButton)findViewById(R.id.divideBtn);
@@ -39,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
         equalBtn = (ImageButton)findViewById(R.id.equalBtn);
 
         resultView.setText("0");
+
+        clearBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentAnswer = 0;
+                int convertToInt = (int)currentAnswer;
+                txtAnswer = String.valueOf(convertToInt);
+                resultView.setText(txtAnswer);
+            }
+        });
 
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,8 +63,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 temp1 = 1;
                 currentAnswer = temp1;
-                sum = String.valueOf(currentAnswer);
-                resultView.setText(sum);
+                showAnswer(currentAnswer);
             }
         });
 
@@ -111,7 +121,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
+     private void showAnswer(Double answer){
+         txtAnswer = String.valueOf(answer);
+         resultView.setText(txtAnswer);
+     }
+
 }
