@@ -9,8 +9,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0;
-    ImageButton addBtn, subtractBtn, equalBtn, divdeBtn, timeBtn;
+    ImageButton addBtn, subtractBtn, equalBtn, divideBtn, timeBtn;
     TextView resultView;
+    String sum = "";
+    double currentAnswer = 0;
+    int temp1 = 0, temp2 = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +34,11 @@ public class MainActivity extends AppCompatActivity {
         btn9 = (Button)findViewById(R.id.btn9);
         addBtn = (ImageButton)findViewById(R.id.addBtn);
         subtractBtn = (ImageButton)findViewById(R.id.subtractBtn);
-        divdeBtn = (ImageButton)findViewById(R.id.divideBtn);
+        divideBtn = (ImageButton)findViewById(R.id.divideBtn);
         timeBtn = (ImageButton)findViewById(R.id.timesBtn);
         equalBtn = (ImageButton)findViewById(R.id.equalBtn);
+
+        resultView.setText("0");
 
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +50,10 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                temp1 = 1;
+                currentAnswer = temp1;
+                sum = String.valueOf(currentAnswer);
+                resultView.setText(sum);
             }
         });
 
