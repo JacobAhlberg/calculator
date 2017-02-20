@@ -1,17 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jacob.acalculator.MainActivity">
 
+    <ImageView
+        android:layout_width="384dp"
+        app:srcCompat="@color/customColor"
+        android:id="@+id/backgroundColor"
+        android:layout_height="153dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
     <TextView
+        android:text="0"
+        android:layout_width="384dp"
+        android:layout_height="52dp"
+        android:id="@+id/resultView"
+        android:textSize="45dp"
+        android:textColor="@color/colorPrimary"
+        android:gravity="right"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        tools:layout_editor_absoluteY="49dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:text="5"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/btn5"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        tools:layout_editor_absoluteY="297dp"
+        tools:layout_editor_absoluteX="102dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp" />
+
+    <Button
+        android:text="7"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/btn7"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        tools:layout_editor_absoluteY="207dp"
+        tools:layout_editor_absoluteX="12dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp" />
+
+    <Button
+        android:text="3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/btn3"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        tools:layout_editor_absoluteY="387dp"
+        tools:layout_editor_absoluteX="192dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp" />
+
+    <Button
+        android:text=","
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/commaBtn"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        tools:layout_editor_absoluteY="477dp"
+        tools:layout_editor_absoluteX="192dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp" />
+
+    <Button
+        android:text="AC"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/clearBtn"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        tools:layout_editor_absoluteY="477dp"
+        tools:layout_editor_absoluteX="12dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif" />
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="416dp"
+        app:srcCompat="@color/colorPrimary"
+        android:id="@+id/imageView"
+        tools:layout_editor_absoluteY="153dp"
+        tools:layout_editor_absoluteX="294dp" />
+
+    <Button
+        android:text="0"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/btn0"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        tools:layout_editor_absoluteY="477dp"
+        tools:layout_editor_absoluteX="102dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp" />
+
+    <Button
+        android:text="2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/btn2"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        tools:layout_editor_absoluteY="387dp"
+        tools:layout_editor_absoluteX="102dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp" />
+
+    <Button
+        android:text="1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/btn1"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        tools:layout_editor_absoluteY="387dp"
+        tools:layout_editor_absoluteX="12dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp" />
+
+    <Button
+        android:text="4"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/btn4"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        tools:layout_editor_absoluteY="297dp"
+        tools:layout_editor_absoluteX="12dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp" />
+
+    <Button
+        android:text="8"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/btn8"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        tools:layout_editor_absoluteY="207dp"
+        tools:layout_editor_absoluteX="102dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp" />
+
+    <Button
+        android:text="9"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/btn9"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        tools:layout_editor_absoluteY="207dp"
+        tools:layout_editor_absoluteX="192dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp" />
+
+    <Button
+        android:text="6"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/btn6"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        tools:layout_editor_absoluteY="297dp"
+        tools:layout_editor_absoluteX="192dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp" />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/add"
+        tools:layout_editor_absoluteY="477dp"
+        tools:layout_editor_absoluteX="294dp"
+        android:id="@+id/addBtn"
+        android:background="@android:color/transparent"
+        android:paddingBottom="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="25dp" />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/divide"
+        tools:layout_editor_absoluteY="207dp"
+        tools:layout_editor_absoluteX="294dp"
+        android:id="@+id/divideBtn"
+        android:background="@android:color/transparent"
+        android:paddingBottom="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="25dp" />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/multiply"
+        tools:layout_editor_absoluteY="297dp"
+        tools:layout_editor_absoluteX="294dp"
+        android:id="@+id/timesBtn"
+        android:background="@android:color/transparent"
+        android:paddingBottom="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="25dp" />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/subtract"
+        tools:layout_editor_absoluteY="387dp"
+        tools:layout_editor_absoluteX="294dp"
+        android:id="@+id/subtractBtn"
+        android:background="@android:color/transparent"
+        android:paddingTop="38dp"
+        android:paddingBottom="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" />
+
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        app:srcCompat="@drawable/equal"
+        tools:layout_editor_absoluteY="117dp"
+        tools:layout_editor_absoluteX="299dp"
+        android:id="@+id/equalBtn"
+        android:background="@android:color/transparent" />
+
+</android.support.constraint.ConstraintLayout>
