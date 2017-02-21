@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     String txtAnswer, calculationTxt, runningNumberTxt = "";
-    int currentAnswer = 0, temp1 = 0, temp2 = 0;
+    double currentAnswer = 0, temp1 = 0, temp2 = 0;
     TextView resultView, calculationView;
 
     @Override
@@ -46,9 +46,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 currentAnswer = 0;
-                int convertToInt = (int)currentAnswer;
-                txtAnswer = String.valueOf(convertToInt);
-                resultView.setText(txtAnswer);
+//                int convertToInt = currentAnswer;
+//                txtAnswer = String.valueOf(convertToInt);
+                calculationView.setText(txtAnswer);
+                resultView.setText("");
             }
         });
 
